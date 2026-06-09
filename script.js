@@ -508,11 +508,11 @@ class AudioManager {
     fallbackTTS(url, callback) {
         const q = state.questions[state.currentIndex];
         
-        if (url.includes('Sahi_Jawab.mp3')) {
+        if (url.includes('assets/audio/Sahi_Jawab.mp3')) {
             this.beep(880, 200);
             if (callback) callback();
             return;
-        } else if (url.includes('Galat_Jawab.mp3')) {
+        } else if (url.includes('assets/audio/Galat_Jawab.mp3')) {
             this.beep(220, 300, 'sawtooth');
             if (callback) callback();
             return;
