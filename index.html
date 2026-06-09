@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study App</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- यह लाइन ऐप को इंस्टॉल करने लायक (PWA) और ऑफलाइन बनाती है -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <!-- 1. होम स्क्रीन (Subjects) -->
+    <div id="home-screen" class="screen active-screen">
+        <div class="header">
+            <h1>विषय चुनें</h1>
+        </div>
+        <div class="container">
+            <button class="btn subject-btn" onclick="openSubject('biology')">🧬 जीव विज्ञान (Biology)</button>
+            <button class="btn subject-btn" onclick="openSubject('physics')">🧲 भौतिक विज्ञान (Physics)</button>
+        </div>
+    </div>
+
+    <!-- 2. चैप्टर स्क्रीन -->
+    <div id="chapter-screen" class="screen">
+        <div class="header">
+            <button class="back-btn" onclick="goHome()">⬅ वापस</button>
+            <h1 id="subject-title">चैप्टर्स</h1>
+        </div>
+        <div id="chapter-list" class="container">
+            <!-- चैप्टर्स यहाँ आएंगे -->
+        </div>
+    </div>
+
+    <!-- 3. क्विज प्ले स्क्रीन -->
+    <div id="quiz-screen" class="screen">
+        <div class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+            <button class="back-btn" onclick="backToChapters()" style="margin: 0; width: auto; padding: 8px 15px;">⬅ बंद करें</button>
+            <h2 id="quiz-title" style="margin: 0; font-size: 18px;">क्विज</h2>
+        </div>
+        
+        <!-- यह iframe आपके बनाए हुए फोल्डर को कॉल करेगा -->
+        <iframe id="quiz-frame" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- यह कोड ऐप को बैकग्राउंड में डाउनलोड करके बिना इंटरनेट के (Offline) चलाएगा -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function() {
+                console.log("Service Worker Registered Successfully!");
+            })
+            .catch(function(error) {
+                console.log("Service Worker Registration Failed:", error);
+            });
+        }
+    </script>
+</body>
+</html>

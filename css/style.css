@@ -1,0 +1,19 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { background-color: #f0f2f5; height: 100vh; overflow: hidden; }
+
+.screen { display: none; height: 100vh; width: 100vw; flex-direction: column; }
+.active-screen { display: flex; }
+
+.header { background-color: #6200ea; color: white; padding: 15px 20px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+.header h1 { font-size: 22px; }
+
+.container { padding: 20px; display: flex; flex-direction: column; gap: 15px; overflow-y: auto; }
+
+.btn { padding: 15px; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.subject-btn { background-color: white; color: #333; border-left: 5px solid #6200ea; }
+.chapter-btn { background-color: white; color: #333; border-left: 5px solid #00c853; }
+
+.back-btn { background-color: transparent; color: white; border: 1px solid white; border-radius: 5px; padding: 5px 10px; font-size: 14px; position: absolute; left: 15px; top: 15px; }
+
+/* iframe की सेटिंग ताकि आपका लेआउट न हिले और फुल स्क्रीन पर आये */
+#quiz-frame { width: 100%; height: calc(100vh - 60px); background: white; }
