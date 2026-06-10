@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study App</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- यह लाइन ऐप को इंस्टॉल करने लायक (PWA) और ऑफलाइन बनाती है -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <!-- 1. होम स्क्रीन (Subjects) -->
+    <div id="home-screen" class="screen active-screen">
+        <div class="header">
+            <h1>विषय चुनें</h1>
+        </div>
+        <div class="container">
+            <button class="btn subject-btn" onclick="openSubject('biology')">🧬 जीव विज्ञान (Biology)</button>
+            <button class="btn subject-btn" onclick="openSubject('physics')">🧲 भौतिक विज्ञान (Physics)</button>
+        </div>
+    </div>
+
+    <!-- 2. सब-कैटेगरी स्क्रीन (नया जोड़ा गया) -->
+    <div id="subcategory-screen" class="screen">
+        <div class="header">
+            <button class="back-btn" onclick="goHome()">⬅ वापस</button>
+            <h1 id="subject-title">सब-कैटेगरी</h1>
+        </div>
+        <div id="subcategory-list" class="container">
+            <!-- सब-कैटेगरी यहाँ आएंगी -->
+        </div>
+    </div>
+
+    <!-- 3. चैप्टर स्क्रीन -->
+    <div id="chapter-screen" class="screen">
+        <div class="header">
+            <button class="back-btn" onclick="backToSubcategories()">⬅ वापस</button>
+            <h1 id="subcategory-title">चैप्टर्स</h1>
+        </div>
+        <div id="chapter-list" class="container">
+            <!-- चैप्टर्स यहाँ आएंगे -->
+        </div>
+    </div>
+
+    <!-- 4. क्विज प्ले स्क्रीन -->
+    <div id="quiz-screen" class="screen">
+        <div class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+            <button class="back-btn" onclick="backToChapters()" style="margin: 0; width: auto; padding: 8px 15px;">⬅ बंद करें</button>
+            <h2 id="quiz-title" style="margin: 0; font-size: 18px;">क्विज</h2>
+        </div>
+        
+        <!-- allow="fullscreen" जोड़ा गया है ताकि क्विज फुल स्क्रीन पर चल सके -->
+        <iframe id="quiz-frame" src="" frameborder="0" allow="fullscreen"></iframe>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- PWA सर्विस वर्कर रजिस्ट्रेशन -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function() {
+                console.log("Service Worker Registered Successfully!");
+            })
+            .catch(function(error) {
+                console.log("Service Worker Registration Failed:", error);
+            });
+        }
+    </script>
+</body>
+</html>
