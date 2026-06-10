@@ -6,9 +6,9 @@ const appData = {
             {
                 name: "जीव विज्ञान 1 (Biology 1)",
                 chapters: [
-    { name: "कोशिका विज्ञान (Cytology)", path: "CytologyQuiz/index.html" },
-    { name: "कोशिका विज्ञान 1 (Cell 1)", path: "Cell1/index.html" },
-    { name: "Cell2", path: "Cell2/index.html" }, // यह आपने नया जोड़ा
+    { name: "कोशिका विज्ञान (Cytology)", path: "Biology/Biology1/CytologyQuiz/index.html" },
+    { name: "कोशिका विज्ञान 1 (Cell 1)", path: "Biology/Biology1/Cell1/index.html" },
+    { name: "Cell2", path: "Biology/Biology1/Cell2/index.html" }, // यह आपने नया जोड़ा
     { name: "मानव शरीर (जल्द आ रहा है)", path: "" }
 ]
             },
