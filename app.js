@@ -20,15 +20,15 @@ const appData = {
             }
         ]
     },
-    "GK GS": {
-        title: "GK GS",
+    "Static GK": {
+        title: "Static GK",
         subcategories: [
             {
-                name: "Static GK",
+                name: "Folkdances",
                 chapters: [
-    { name: "Folkdances Part-1", path: "GK GS/Static GK/Folkdances1/index.html" },
-    { name: "Folkdances Part-2", path: "GK GS/Static GK/Folkdances2/index.html" },
-    { name: "Folkdances Part-3", path: "GK GS/Static GK/Folkdances3/index.html" }, // यह आपने नया जोड़ा
+    { name: "Folkdances Part-1", path: "Static GK/Folkdances/Folkdances1/index.html" },
+    { name: "Folkdances Part-2", path: "Static GK/Folkdances/Folkdances2/index.html" },
+    { name: "Folkdances Part-3", path: "Static GK/Folkdances/Folkdances3/index.html" }, // यह आपने नया जोड़ा
     { name: "Folkdances Part-4", path: "" }
 ]
             },
@@ -146,4 +146,4 @@ function backToChapters() {
 
 function goHome() { 
     showScreen('home-screen'); 
-        }
+            }
