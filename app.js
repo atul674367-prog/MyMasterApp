@@ -20,6 +20,26 @@ const appData = {
             }
         ]
     },
+    "GK GS": {
+        title: "GK GS",
+        subcategories: [
+            {
+                name: "Static GK",
+                chapters: [
+    { name: "Folkdances Part-1", path: "GK GS/Static GK/Folkdances1/index.html" },
+    { name: "Folkdances Part-2", path: "GK GS/Static GK/Folkdances2/index.html" },
+    { name: "Folkdances Part-3", path: "GK GS/Static GK/Folkdances3/index.html" }, // यह आपने नया जोड़ा
+    { name: "Folkdances Part-4", path: "" }
+]
+            },
+            {
+                name: "History",
+                chapters: [
+                    { name: "Ancient History (जल्द आ रहा है)", path: "" }
+                ]
+            }
+        ]
+    },
     "physics": {
         title: "भौतिक विज्ञान (Physics)",
         subcategories: [
@@ -126,4 +146,4 @@ function backToChapters() {
 
 function goHome() { 
     showScreen('home-screen'); 
-}
+        }
