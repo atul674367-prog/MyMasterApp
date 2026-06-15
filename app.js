@@ -20,7 +20,7 @@ const appData = {
             }
         ]
     },
-    "Static GK": {
+    "static_gk": {
         title: "Static GK",
         subcategories: [
             {
@@ -146,4 +146,4 @@ function backToChapters() {
 
 function goHome() { 
     showScreen('home-screen'); 
-            }
+                                              }
