@@ -40,6 +40,24 @@ const appData = {
             }
         ]
     },
+    "current_affairs": {
+        title: "Current Affairs",
+        subcategories: [
+            {
+                name: "May2026",
+                chapters: [
+    { name: "Weekly(27April-2May)", path: "Current Affairs/May2026/Weekly(27April-2May)/index.html" },
+    { name: "Weekly(4May-10May)", path: "" }
+]
+            },
+            {
+                name: "April2026",
+                chapters: [
+                    { name: "Weekly (जल्द आ रहा है)", path: "" }
+                ]
+            }
+        ]
+    },
     "physics": {
         title: "भौतिक विज्ञान (Physics)",
         subcategories: [
@@ -146,4 +164,4 @@ function backToChapters() {
 
 function goHome() { 
     showScreen('home-screen'); 
-                                              }
+}
