@@ -47,7 +47,8 @@ const appData = {
                 name: "May2026",
                 chapters: [
     { name: "Weekly(27April-2May)", path: "Current Affairs/May2026/Weekly(27April-2May)/index.html" },
-    { name: "Weekly(4May-10May)", path: "" }
+    { name: "Weekly(4May-8May)", path: "Current Affairs/May2026/Weekly(4May-8May)/index.html" },
+    { name: "Weekly (जल्द आ रहा है)", path: "" }
 ]
             },
             {
@@ -164,4 +165,4 @@ function backToChapters() {
 
 function goHome() { 
     showScreen('home-screen'); 
-}
+                      }
